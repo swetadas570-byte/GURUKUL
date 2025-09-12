@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biology Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(120deg, #2980b9, #8e44ad);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subject-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .subject-container a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .subject-container a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="subject-container">
+    <h1>Biology Quiz</h1>
+    <form id="quizForm">
+        <h3>Question 1:</h3>
+        <p>Which of the following cell organelles is responsible for generating energy through cellular respiration?</p>
+        <input type="radio" name="q1" value="a"> a) Golgi apparatus<br>
+        <input type="radio" name="q1" value="b"> b) Endoplasmic reticulum<br>
+        <input type="radio" name="q1" value="c"> c) Mitochondria<br>
+        <input type="radio" name="q1" value="c"> d) Lysosomes<br>
+
+        <h3>Question 2:</h3>
+        <p>Which blood vessel carries deoxygenated blood from the heart to the lungs for oxygenation?</p>
+        <input type="radio" name="q2" value="a"> a) Pulmonary artery<br>
+        <input type="radio" name="q2" value="b"> b) Pulmonary vein<br>
+        <input type="radio" name="q2" value="c"> c) Aorta<br>
+        <input type="radio" name="q2" value="c"> d) Superior vena cava<br>
+
+        <h3>Question 3:</h3>
+        <p>Which of the following is responsible for transmitting signals between neurons in the nervous system?</p>
+        <input type="radio" name="q3" value="a"> a) Hormones<br>
+        <input type="radio" name="q3" value="b"> b) Neurotransmitters<br>
+        <input type="radio" name="q3" value="c"> c) Enzymes<br>
+        <input type="radio" name="q3" value="d"> c) White blood cells<br>
+
+        <h3>Question 4:</h3>
+        <p>Which process involves the conversion of atmospheric nitrogen into a usable form by plants?</p>
+        <input type="radio" name="q4" value="a"> a) Nitrogen fixation<br>
+        <input type="radio" name="q4" value="b"> b) Photosynthesis<br>
+        <input type="radio" name="q4" value="c"> c) Transpiration<br>
+        <input type="radio" name="q4" value="d"> d) Respiration<br>
+
+        <h3>Question 5:</h3>
+        <p>Which of the following is responsible for the breakdown of carbohydrates into glucose during digestion?</p>
+        <input type="radio" name="q5" value="a"> a) Lipase<br>
+        <input type="radio" name="q5" value="b"> b) Amylase<br>
+        <input type="radio" name="q5" value="c"> c) Trypsin<br>
+        <input type="radio" name="q5" value="d"> d) Pepsin<br>
+
+        <h3>Question 6:</h3>
+        <p>Which structure in the human eye is responsible for refracting light and focusing it onto the retina?</p>
+        <input type="radio" name="q6" value="a"> a) Cornea<br>
+        <input type="radio" name="q6" value="b"> b) Iris<br>
+        <input type="radio" name="q6" value="c"> c) Lens<br>
+        <input type="radio" name="q6" value="d"> d) Sclera<br>
+
+        <h3>Question 7:</h3>
+        <p>Which of the following is the smallest unit of life?</p>
+        <input type="radio" name="q7" value="a"> a) Cell<br>
+        <input type="radio" name="q7" value="b"> b) Atom<br>
+        <input type="radio" name="q7" value="c"> c) Molecule<br>
+        <input type="radio" name="q7" value="c"> d) Organ<br>
+
+        <h3>Question 8:</h3>
+        <p>What is the function of the alveoli in the respiratory system?</p>
+        <input type="radio" name="q8" value="a"> a) Pumping blood to the heart<br>
+        <input type="radio" name="q8" value="b"> b) Exchanging gases (oxygen and carbon dioxide) with the blood<br>
+        <input type="radio" name="q8" value="c"> c) Producing mucus to trap dust and pathogens<br>
+        <input type="radio" name="q8" value="d"> d) Filtering waste products from the blood<br>
+
+        <h3>Question 9:</h3>
+        <p>Which hormone is responsible for regulating blood sugar levels in the human body?</p>
+        <input type="radio" name="q9" value="a"> a) Insulin<br>
+        <input type="radio" name="q9" value="b"> b) Estrogen<br>
+        <input type="radio" name="q9" value="c"> c) Testosterone<br>
+        <input type="radio" name="q9" value="c"> d) Thyroxine<br>
+
+        <h3>Question 10:</h3>
+        <p>In which stage of mitosis do the sister chromatids separate and move to opposite poles of the cell?</p>
+        <input type="radio" name="q10" value="a"> a) Prophase<br>
+        <input type="radio" name="q10" value="b"> b) Metaphase<br>
+        <input type="radio" name="q10" value="c"> c) Anaphase<br>
+        <input type="radio" name="q10" value="c"> d) Telophase<br>
+
+        <br>
+        <input type="button" value="Submit" onclick="showResult()">
+    </form>
+    </div>
+
+    <div id="result" style="display: none">
+        <h2>Your Results</h2>
+        <p id="score"></p>
+    </div>
+
+    <script>
+        function showResult() {
+            const answers = {
+                q1: 'c',
+                q2: 'a',
+                q3: 'b',
+                q4: 'a',
+                q5: 'b',
+                q6: 'c',
+                q7: 'a',
+                q8: 'b',
+                q9: 'a',
+                q10: 'c'
+            };
+
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            const scoreParagraph = document.getElementById('score');
+
+            for (let i = 1; i <= 10; i++) {
+                const questionName = `q${i}`;
+                const selectedOption = form.elements[questionName].value;
+
+                if (selectedOption === answers[questionName]) {
+                    score++;
+                }
+            }
+            
+            scoreParagraph.innerText = `You scored ${score} out of 10.`;
+            resultDiv.style.display = 'block';
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathematics Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(120deg, #2980b9, #8e44ad);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subject-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .subject-container a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .subject-container a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="subject-container">
+    <h1>Math Quiz</h1>
+    <form id="quizForm">
+        <h3>Question 1:</h3>
+        <p>What is the value of the expression (sin^2θ + cos^2θ) when θ = 30°?</p>
+        <input type="radio" name="q1" value="a"> a) 1/2<br>
+        <input type="radio" name="q1" value="b"> b) 3/4<br>
+        <input type="radio" name="q1" value="c"> c) 2/3<br>
+        <input type="radio" name="q1" value="c"> d) 1<br>
+
+        <h3>Question 2:</h3>
+        <p>If f(x) = 2x^2 + 5x - 3, what is the value of f(-1)?</p>
+        <input type="radio" name="q2" value="a"> a) -2<br>
+        <input type="radio" name="q2" value="b"> b) -3<br>
+        <input type="radio" name="q2" value="c"> c) 0<br>
+        <input type="radio" name="q2" value="c"> d) 2<br>
+
+        <h3>Question 3:</h3>
+        <p>The sum of two numbers is 15, and their product is 56. What are the two numbers?</p>
+        <input type="radio" name="q3" value="a"> a) 8 and 7<br>
+        <input type="radio" name="q3" value="b"> b) 9 and 6<br>
+        <input type="radio" name="q3" value="c"> c) 10 and 5<br>
+        <input type="radio" name="q3" value="d"> c) 12 and 3<br>
+
+        <h3>Question 4:</h3>
+        <p>If log(base2)(x) + log(base2)(x + 16) = 4, what is the value of x?</p>
+        <input type="radio" name="q4" value="a"> a) 4<br>
+        <input type="radio" name="q4" value="b"> b) 8<br>
+        <input type="radio" name="q4" value="c"> c) 16<br>
+        <input type="radio" name="q4" value="d"> d) 32<br>
+
+        <h3>Question 5:</h3>
+        <p>If a car travels at a speed of 60 km/h for the first hour and 80 km/h for the second hour, what is the average speed of the car for the entire journey?</p>
+        <input type="radio" name="q5" value="a"> a) 60km/h<br>
+        <input type="radio" name="q5" value="b"> b) 65km/h<br>
+        <input type="radio" name="q5" value="c"> c) 70km/h<br>
+        <input type="radio" name="q5" value="d"> d) 75km/h<br>
+
+        <h3>Question 6:</h3>
+        <p>What is the value of (1 + tan^2(45°))/(sec^2(30°) + cos^2(60°))?</p>
+        <input type="radio" name="q6" value="a"> a) 1/2<br>
+        <input type="radio" name="q6" value="b"> b) 2<br>
+        <input type="radio" name="q6" value="c"> c) 3/2<br>
+        <input type="radio" name="q6" value="d"> d) 1<br>
+
+        <h3>Question 7:</h3>
+        <p>If the complex number z = 3 + 4i, what is the absolute value of z?</p>
+        <input type="radio" name="q7" value="a"> a) 3<br>
+        <input type="radio" name="q7" value="b"> b) 4<br>
+        <input type="radio" name="q7" value="c"> c) 5<br>
+        <input type="radio" name="q7" value="c"> d) 7<br>
+
+        <h3>Question 8:</h3>
+        <p>If the determinant of a 2x2 matrix is 5 and the trace is 2, what are the eigenvalues of the matrix?</p>
+        <input type="radio" name="q8" value="a"> a) 1 and 3<br>
+        <input type="radio" name="q8" value="b"> b) -1 and 5<br>
+        <input type="radio" name="q8" value="c"> c) 2 and 3<br>
+        <input type="radio" name="q8" value="d"> d) 4 and 1<br>
+
+        <h3>Question 9:</h3>
+        <p>A right circular cone with height 12 cm and base radius 5 cm is cut by a plane parallel to its base. The smaller cone that is removed has a height of 4 cm. What is the volume of the remaining frustum?</p>
+        <input type="radio" name="q9" value="a"> a) 75π cm³<br>
+        <input type="radio" name="q9" value="b"> b) 100π cm³<br>
+        <input type="radio" name="q9" value="c"> c) 125π cm³<br>
+        <input type="radio" name="q9" value="c"> d) 150π cm³<br>
+
+        <h3>Question 10:</h3>
+        <p>If the vectors A = 2i + 3j and B = 4i - j, what is the angle between A and B in degrees?</p>
+        <input type="radio" name="q10" value="a"> a) 30°<br>
+        <input type="radio" name="q10" value="b"> b) 45°<br>
+        <input type="radio" name="q10" value="c"> c) 60°<br>
+        <input type="radio" name="q10" value="c"> d) 90°<br>
+
+        <br>
+        <input type="button" value="Submit" onclick="showResult()">
+    </form>
+    </div>
+
+    <div id="result" style="display: none">
+        <h2>Your Results</h2>
+        <p id="score"></p>
+    </div>
+
+    <script>
+        function showResult() {
+            const answers = {
+                q1: 'd',
+                q2: 'a',
+                q3: 'a',
+                q4: 'c',
+                q5: 'b',
+                q6: 'a',
+                q7: 'c',
+                q8: 'a',
+                q9: 'c',
+                q10: 'b'
+            };
+
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            const scoreParagraph = document.getElementById('score');
+
+            for (let i = 1; i <= 10; i++) {
+                const questionName = `q${i}`;
+                const selectedOption = form.elements[questionName].value;
+
+                if (selectedOption === answers[questionName]) {
+                    score++;
+                }
+            }
+            
+            scoreParagraph.innerText = `You scored ${score} out of 10.`;
+            resultDiv.style.display = 'block';
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chemistry Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(120deg, #2980b9, #8e44ad);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subject-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .subject-container a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .subject-container a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="subject-container">
+    <h1>Chemistry Quiz</h1>
+    <form id="quizForm">
+        <h3>Question 1:</h3>
+        <p>Which of the following elements belongs to the halogen group?</p>
+        <input type="radio" name="q1" value="a"> a) Sodium (Na)<br>
+        <input type="radio" name="q1" value="b"> b) Chlorine (Cl)<br>
+        <input type="radio" name="q1" value="c"> c) Calcium (Ca)<br>
+        <input type="radio" name="q1" value="c"> d) Nitrogen (N)<br>
+
+        <h3>Question 2:</h3>
+        <p>The process of conversion of a solid directly into a gas without passing through the liquid state is called:</p>
+        <input type="radio" name="q2" value="a"> a) Sublimation<br>
+        <input type="radio" name="q2" value="b"> b) Evaporation<br>
+        <input type="radio" name="q2" value="c"> c) Condensation<br>
+        <input type="radio" name="q2" value="c"> d) Vaporization<br>
+
+        <h3>Question 3:</h3>
+        <p>Which of the following compounds is used in the manufacture of fertilizers and explosives?</p>
+        <input type="radio" name="q3" value="a"> a) Sodium chloride (NaCl)<br>
+        <input type="radio" name="q3" value="b"> b) Ammonium nitrate (NH4NO3)<br>
+        <input type="radio" name="q3" value="c"> c) Calcium carbonate (CaCO3)<br>
+        <input type="radio" name="q3" value="d"> c) Potassium sulfate (K2SO4)<br>
+
+        <h3>Question 4:</h3>
+        <p>The oxidation state of oxygen in most of its compounds is:</p>
+        <input type="radio" name="q4" value="a"> a) +2<br>
+        <input type="radio" name="q4" value="b"> b) -1<br>
+        <input type="radio" name="q4" value="c"> c) 0<br>
+        <input type="radio" name="q4" value="d"> d) -2<br>
+
+        <h3>Question 5:</h3>
+        <p>The process of converting vegetable oils into solid fats by the addition of hydrogen is known as:</p>
+        <input type="radio" name="q5" value="a"> a) Polymerization<br>
+        <input type="radio" name="q5" value="b"> b) Halogenation<br>
+        <input type="radio" name="q5" value="c"> c) Hydrogenation<br>
+        <input type="radio" name="q5" value="d"> d) Saponification<br>
+
+        <h3>Question 6:</h3>
+        <p>The metal used to extract copper from its ore by smelting is:</p>
+        <input type="radio" name="q6" value="a"> a) Iron (Fe)<br>
+        <input type="radio" name="q6" value="b"> b) Zinc (Zn)<br>
+        <input type="radio" name="q6" value="c"> c) Carbon (C)<br>
+        <input type="radio" name="q6" value="d"> d) Aluminum (Al)<br>
+
+        <h3>Question 7:</h3>
+        <p>The phenomenon of an atom or molecule absorbing light and then re-emitting it in all directions is called:</p>
+        <input type="radio" name="q7" value="a"> a) Refraction<br>
+        <input type="radio" name="q7" value="b"> b) Reflection<br>
+        <input type="radio" name="q7" value="c"> c) Diffraction<br>
+        <input type="radio" name="q7" value="c"> d) Scattering<br>
+
+        <h3>Question 8:</h3>
+        <p>Which of the following is an example of an exothermic reaction?</p>
+        <input type="radio" name="q8" value="a"> a) Photosynthesis<br>
+        <input type="radio" name="q8" value="b"> b) Respiration<br>
+        <input type="radio" name="q8" value="c"> c) Combustion<br>
+        <input type="radio" name="q8" value="d"> d) Decomposition<br>
+
+        <h3>Question 9:</h3>
+        <p>Which of the following is the main component of natural gas?</p>
+        <input type="radio" name="q9" value="a"> a) Methane (CH4)<br>
+        <input type="radio" name="q9" value="b"> b) Ethanol (C2H5OH)<br>
+        <input type="radio" name="q9" value="c"> c) Propane (C3H8)<br>
+        <input type="radio" name="q9" value="c"> d) Butane (C4H10)<br>
+
+        <h3>Question 10:</h3>
+        <p>The pH of a solution with a hydrogen ion concentration of 1 x 10^-6 M would be:</p>
+        <input type="radio" name="q10" value="a"> a) 1<br>
+        <input type="radio" name="q10" value="b"> b) 6<br>
+        <input type="radio" name="q10" value="c"> c) 8<br>
+        <input type="radio" name="q10" value="c"> d) 14<br>
+
+        <br>
+        <input type="button" value="Submit" onclick="showResult()">
+    </form>
+    </div>
+
+    <div id="result" style="display: none">
+        <h2>Your Results</h2>
+        <p id="score"></p>
+    </div>
+
+    <script>
+        function showResult() {
+            const answers = {
+                q1: 'b',
+                q2: 'a',
+                q3: 'b',
+                q4: 'd',
+                q5: 'c',
+                q6: 'c',
+                q7: 'd',
+                q8: 'c',
+                q9: 'a',
+                q10: 'b'
+            };
+
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            const scoreParagraph = document.getElementById('score');
+
+            for (let i = 1; i <= 10; i++) {
+                const questionName = `q${i}`;
+                const selectedOption = form.elements[questionName].value;
+
+                if (selectedOption === answers[questionName]) {
+                    score++;
+                }
+            }
+            
+            scoreParagraph.innerText = `You scored ${score} out of 10.`;
+            resultDiv.style.display = 'block';
+            
+        }
+    </script>
+</body>
+</html>
